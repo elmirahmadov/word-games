@@ -1,45 +1,45 @@
-// const words = [
-//   "Elmir",
-//   "Soltan",
-//   "Dürrə",
-//   "Səma",
-//   "Musa",
-//   "İzzət",
-//   "Emil",
-//   "Sərxan",
-//   "Murad",
-//   "İbrahim",
-// ];
+const words = [
+  "Elmir",
+  "Soltan",
+  "Dürrə",
+  "Səma",
+  "Musa",
+  "İzzət",
+  "Emil",
+  "Sərxan",
+  "Murad",
+  "İbrahim",
+];
 
-// function randomElements(arr) {
-//   const randomIndex1 = Math.floor(Math.random() * arr.length);
-//   return arr[randomIndex1];
-// }
+function randomElements(arr) {
+  const randomIndex1 = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex1];
+}
 
-// const guessWords = randomElements(words);
+const guessWords = randomElements(words);
 
-// const hiddenWords = guessWords.split("").map(function () {
-//   return "_";
-// });
+const hiddenWords = guessWords.split("").map(function () {
+  return "_";
+});
 
-// while (hiddenWords.includes("_")) {
-//   console.log(`Your secret word:  ${hiddenWords.join(" ")}`);
+while (hiddenWords.includes("_")) {
+  alert(`Your secret word:  ${hiddenWords.join(" ")}`);
 
-//   const letter = prompt("Enter your letter");
+  const letter = prompt("Enter your letter");
 
-//   let found = false;
-//   for (let i = 0; i < guessWords.length; i++) {
-//     if (guessWords[i] === letter) {
-//       hiddenWords[i] = letter;
-//       found = true;
-//     }
-//   }
+  let found = false;
+  for (let i = 0; i < guessWords.length; i++) {
+    if (guessWords[i] === letter) {
+      hiddenWords[i] = letter;
+      found = true;
+    }
+  }
 
-//   if (!found) {
-//     console.log("Letter not found.");
-//   }
+  if (!found) {
+    alert("Letter not found.");
+  }
 
-//   console.log(hiddenWords.join(" "));
-// }
+  alert(hiddenWords.join(" "));
+}
 
-// console.log("Congratulations, you found it!");
+alert("Congratulations, you found it!");
