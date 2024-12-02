@@ -34,7 +34,7 @@
     });
 
     while (hiddenWords.includes("_")) {
-      console.log(`Your secret word:  ${hiddenWords.join(" ")}`);
+      alert(`Your secret word:  ${hiddenWords.join(" ")}`);
 
       const letter = prompt("Enter your letter:");
 
@@ -47,12 +47,12 @@
       }
 
       if (!found) {
-        console.log("Letter not found.");
+        alert("Letter not found.");
       }
 
-      console.log(hiddenWords.join(" "));
+      alert(hiddenWords.join(" "));
     }
 
-    console.log("Congratulations, you found it!");
+    alert("Congratulations, you found it!");
   </script>
 </html>
